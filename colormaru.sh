@@ -10,5 +10,5 @@ wget https://www.dropbox.com/s/zkehq1uwahhbc2o/ColorizeArtistic_gen.pth?dl=0 -O 
 wget https://media.githubusercontent.com/media/jantic/DeOldify/master/resource_images/watermark.png -O ./resource_images/watermark.png
 wget https://gist.githubusercontent.com/forkbabu/3d6fccc0abcc7e63703b4088efebdd5a/raw/421c63ca24d49990f5037f441c552b48395f2f27/pardesi3.py -O pardesi3.py
 python pardesi3.py
-wget https://gist.githubusercontent.com/forkbabu/3d6fccc0abcc7e63703b4088efebdd5a/raw/421c63ca24d49990f5037f441c552b48395f2f27/pardesi.py -O pardesi4.py
+wget https://gist.githubusercontent.com/forkbabu/3d6fccc0abcc7e63703b4088efebdd5a/raw/365bef35cc121b30d5f1ad995e5d6c3d95ac7ae8/pardesi4.py -O pardesi4.py
 python pardesi4.py
