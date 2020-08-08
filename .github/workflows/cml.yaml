@@ -14,9 +14,6 @@ jobs:
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pip3 install -r requirements.txt
-          python train.py
-          
-          cat metrics.txt >> confusion.md
-          cml-publish confusion_matrix.png --md --title 'Confusion Matrix' >> confusion.md
-          cml-send-comment confusion.md 
+          sh colormaru.sh
+          cml-publish result_images/image.png --md --title 'ColorMaru' >> color.md
+          cml-send-comment color.md 
