@@ -9,5 +9,6 @@ jobs:
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          sudo chown -R $(id -u):$(id -g) /usr/local/lib/node_modules
-          npm i -g @dvcorg/cml
+          #sudo chown -R $(id -u):$(id -g) /usr/local/lib/node_modules
+          sudo chown -R $(whoami) /usr/local/lib/node_modules
+          sudo npm i -g @dvcorg/cml
