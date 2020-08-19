@@ -12,4 +12,4 @@ jobs:
           sudo chown -R $(whoami) /usr/local/lib/node_modules
           sudo chmod -R 777 *
           npm config set unsafe-perm=true
-          npm i -g @dvcorg/cml
+          npm i @dvcorg/cml
