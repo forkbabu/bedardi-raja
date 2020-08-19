@@ -5,7 +5,6 @@ on: [push]
 jobs:
   run:
     runs-on: [ubuntu-latest]
-    container: docker://dvcorg/cml-py3:latest
 
     steps:
       - uses: actions/checkout@v2
@@ -14,6 +13,7 @@ jobs:
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          npm i -g @dvcorg/cml
           sh colormaru.sh
           cml-publish result_images/image.png --md --title 'ColorMaru' >> color.md
           cml-send-comment color.md 
