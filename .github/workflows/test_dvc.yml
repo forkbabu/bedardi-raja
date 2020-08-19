@@ -11,4 +11,4 @@ jobs:
         run: |
           sudo chown -R $(whoami) /usr/local/lib/node_modules
           sudo chmod -R 777 *
-          sudo npm i -g @dvcorg/cml
+          npm i -g @dvcorg/cml
