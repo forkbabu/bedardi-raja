@@ -8,7 +8,6 @@ jobs:
       - name: dvc_npm
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_USERNAME: "ucalyptus"
         run: |
-          sudo chown -R $GITHUB_USERNAME /usr/local/lib/node_modules
+          sudo chown -R $(id -u):$(id -g) /usr/local/lib/node_modules
           npm i -g @dvcorg/cml
