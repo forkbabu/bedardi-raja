@@ -1,4 +1,4 @@
-name: train-my-model
+name: Color_That
 
 on: [push]
 
@@ -9,11 +9,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: cml_run
+      - name: colormaru_run
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          sudo npm i -g @dvcorg/cml
+          sudo chown -R $(whoami) /usr/local/lib/node_modules
+          sudo chmod -R 777 *
+          npm config set unsafe-perm=true
+          npm i @dvcorg/cml
           sh colormaru.sh
           cml-publish result_images/image.png --md --title 'ColorMaru' >> color.md
           cml-send-comment color.md 
